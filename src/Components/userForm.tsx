@@ -17,8 +17,7 @@ const UserForm =()=>{
  
 
  function inputChange(e:React.ChangeEvent<HTMLInputElement>){
-    const { name, value, checked } = e.target;
-
+    const { name, value, checked } = e.target;    
     switch(name)    {
         case "name":
             uform.name=value;
@@ -43,7 +42,8 @@ const UserForm =()=>{
     
  }
  
- const submitForm=()=>{
+ const submitForm=(e:React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
      console.log(uform)
      alert(JSON.stringify(uform))
      setForm(uform);      
@@ -53,7 +53,7 @@ const UserForm =()=>{
     return (        
         <div id='deatilsForm'>
             <p>Deatils Form</p>
-            <form id="iform">
+            <form id="iform" onSubmit={submitForm}>
             <ul>
                 <li>
                     <label>Name : </label>
@@ -103,7 +103,7 @@ const UserForm =()=>{
                     <label htmlFor="female" >Female</label>
                 </li>
             </ul>
-            <button value="Submit" onClick={submitForm}>Submit</button>
+            <button value="Submit" >Submit</button>
             </form>
         </div>
     );
