@@ -6,6 +6,7 @@ import Gallery from './Components/Gallery';
 import React,{useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Table from './Table/Table'
+import userForm from './Components/userForm';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Route path={"/"} exact component={Home} />
               <Route path={"/Table"} exact component={Table} />
               <Route path={"/Gallery"} exact component={Gallery} />
+              <Route path={"/userForm"} exact component={userForm} />
               <Route path={"/FAQ"} exact component={Faq} />
             </Switch>
           </div>

@@ -21,6 +21,9 @@ const Header = () => {
                             <NavLink to="/Gallery" exact activeStyle={{ color: '#2a6496' }}>Gallery</NavLink>
                         </li>
                         <li>
+                            <NavLink to="/userForm" exact activeStyle={{ color: '#2a6496' }}>User Form</NavLink>
+                        </li>
+                        <li>
                             <NavLink to="/FAQ" exact activeStyle={{ color: '#2a6496' }}>FAQ</NavLink>
                         </li>
                     </ul>
