@@ -1,5 +1,4 @@
 import React, { useContext, useReducer,useMemo } from 'react';
-
 const initialState = { count: 0 };
 
 function reducer(state:any, action:any) {
@@ -25,6 +24,7 @@ const ExContext = React.memo(({}) => {
         <p>Call bcak text {text} and use memo {memoizedValue}</p>
       </div>
       
+     
       Reducer Count: {state.count}
       <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
       <button onClick={() => dispatch({ type: 'increment' })}>+</button>
